@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title2 = "B17AEcom";
+  title = "B17AEcom";
 
   fun2() {
     console.log('')
+  let title = 'B17AEcom sdfsdfs sdfsf sdf sd';
+  }
+
+  funct() {
+
+    let title2 = 'B17AEcom sdfsdfs sdfsf sdf sd';
   }
 }
