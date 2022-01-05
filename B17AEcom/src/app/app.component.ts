@@ -6,11 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-<<<<<<< HEAD
+ 
   title = "B17AEcom";
-=======
-  title = 'B17AEcom sdfsdfs sdfsf sdf ssdf dfsd d';
->>>>>>> fe8b823 (temp 2)
 
   fun2() {
     console.log('')
