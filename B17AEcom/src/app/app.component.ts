@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'B17AEcom sdfsdfs sdfsf sdf sd';
+  title = 'B17AEcom sdfsdfs sdfsf sdf ssdf dfsd d';
 
 
   funct() {
 
-    let title2 = 'B17AEcom sdfsdfs sdfsf sdf sd';
+    let title2 = 'B17AEcom sdfsdfs sdfsf sdf sd sdfsdfs d sdfsd ';
   }
 }
