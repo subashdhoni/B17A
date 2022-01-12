@@ -1,0 +1,60 @@
+ <div class="book">
+    <div class="row">
+    <div class="col-sm-2"></div>
+<div class="col-sm-8 head">
+    <p>My Orders</p>
+</div>
+<div class="col-sm-2"></div>
+<div>
+</div>
+    
+</div>
+
+
+<div class="row">
+
+<div class="col-sm-2"></div>
+
+<div class="col-sm-8 ">
+    <div class="data" *ngIf="!loadData"><h1>Looks like you have not placed any orders !!!</h1>
+    <button mat-raised-button color="primary" class="start"  style="color: white;" [routerLink]='["/"]'>Start shopping</button>
+        </div>
+   
+            <div *ngIf="loadData">
+
+                <mat-form-field appearance="standard" class="full-width">
+                    <mat-label>Filter</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+                </mat-form-field>
+                
+              <table  mat-table [dataSource]="dataSource" >
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef>Order Id </th>
+                    <td mat-cell *matCellDef="let data"> {{data.id}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef>Ordered Date </th>
+                    <td mat-cell *matCellDef="let data"> {{data.date}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="total">
+                    <th mat-header-cell *matHeaderCellDef>Order Total </th>
+                    <td mat-cell *matCellDef="let data"> {{data.total | currency: "INR"}} </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+               
+               </table>
+            </div>
+            
+               <mat-paginator  [pageSizeOptions]="[2,5,10,15,20]" [pageSize]="2" showFirstLastButtons ></mat-paginator>
+
+            </div>
+
+
+        <div class="col-sm-2"></div>
+    </div>
+
+</div> 
